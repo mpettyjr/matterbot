@@ -160,6 +160,8 @@
   <ItemGroup>
     <ClCompile Include="ConsoleLogger.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Md5.cpp" />
+    <ClCompile Include="Md5Utilities.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Matterbot\Matterbot.vcxproj">
@@ -167,9 +169,19 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Capitals.h" />
+    <ClInclude Include="Challenges.h" />
     <ClInclude Include="EchoCommand.h" />
     <ClInclude Include="ConsoleLogger.h" />
+    <ClInclude Include="MakeMd5.h" />
+    <ClInclude Include="mapHeader.h" />
+    <ClInclude Include="Math.h" />
+    <ClInclude Include="Md5.h" />
+    <ClInclude Include="Md5Utilities.h" />
     <ClInclude Include="ReverseCommand.h" />
+    <ClInclude Include="StringPlay.h" />
+    <ClInclude Include="UselessFacts.h" />
+    <ClInclude Include="WeatherCommand.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
