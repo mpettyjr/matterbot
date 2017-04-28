@@ -5,7 +5,7 @@
 #include <string>
 #include "Matterbot.h"
 #include "Md5Utilities.h"
-#include "mapHeader.h"
+#include "Header.h"
 #include <algorithm>
 
 using namespace std;
@@ -21,17 +21,16 @@ namespace lospi
 
 		std::wstring handle_command(const std::wstring &team, const std::wstring &channel,
 			const std::wstring &user, const std::wstring &command_text) override {
-			unsigned int length = command_text.size();
+			auto length = command_text.size();
 			std::vector<Md5Digest> myVector;
+			std::wstring returnValue;
 			
-			for (int i = 0; i < length; )
+			for (int i = 0; i < length; i += 33)
 			{
 				auto hash = command_text.substr(i, 32);
 				myVector.emplace_back(get_md5_from_str(hash));  //runs wstring to md5 function then places it in vector
-				i += 33;
 			}
-			
-			std::wstring returnValue;
+						
 			for (int j = 0; j < myVector.size(); j++)
 			{
 				auto it = myMap.find(myVector[j]);

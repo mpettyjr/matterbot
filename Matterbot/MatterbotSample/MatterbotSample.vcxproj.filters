@@ -65,7 +65,16 @@
     <ClInclude Include="Challenges.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="mapHeader.h">
+    <ClInclude Include="user.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="password.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="combine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
